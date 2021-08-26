@@ -1,4 +1,4 @@
-# Khaled Mahmoud
+<h1 align="center">Khaled Mahmoud</h1>
 Biochemist, QC Specialist at Wadi Group, Egypt.
 ## Personal Website
 ### My Repositories:
