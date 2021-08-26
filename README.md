@@ -1,6 +1,6 @@
 <h1 align="center">Khaled Mahmoud</h1>
-Biochemist, QC Specialist at Wadi Group, Egypt.
-## Personal Website
+<p align="center">Biochemist, QC Specialist at Wadi Group, Egypt.</p>
+<h3 align="center">Personal Website</h3>
 ### My Repositories:
 https://github.com/KhaledMahm0vd
 ### Contact:
