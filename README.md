@@ -1,5 +1,6 @@
 <h1 align="center">Khaled Mahmoud</h1>
-<p align="center">Biochemist, QC Specialist at Soya Oil Company, Egypt.</p>
+<p align="center">Biochemist, QC Specialist at Soya Oil Plant, Egypt.</p>
+<p align="center">Aspiring Junior Node.JS Backend Developer</p>
 <h3 align="center">Personal Website</h3>
 <h2 align="center"> My Repositories:</h2>
 <a href="https://github.com/KhaledMahm0vd" target="_blank">Github</a>
