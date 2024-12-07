@@ -1,10 +1,82 @@
+/* styles.css */
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(to bottom, #6a11cb, #2575fc); /* Purple-blue gradient */
-    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to top, #fbc2eb, #feb47b);
+}
+
+header {
+    background: linear-gradient(to bottom, #ff7e5f, #feb47b);
+    /*padding: 1rem 0;*/
     text-align: center;
 }
 
-h1 {
-    color: #4CAF50;
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+header p {
+    margin: 0.5rem 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.section {
+    padding: 2rem 0;
+}
+
+.skills-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.skills-list li {
+    background: #ddd;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+.projects-grid {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.project {
+    flex: 1 1 calc(30% - 1rem);
+    background: #fff;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+footer {
+    text-align: center;
+    /*padding: 1rem 0;*/
+    background: linear-gradient(to bottom,#fac9a2, #c29ee9); /* Purple-blue gradient */
 }
