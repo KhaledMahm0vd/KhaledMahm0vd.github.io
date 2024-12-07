@@ -9,17 +9,17 @@ body {
 
 header {
     background: linear-gradient(to bottom, #ff7e5f, #feb47b);
-    /*padding: 1rem 0;*/
+    /*padding: 16px 0;*/
     text-align: center;
 }
 
 header h1 {
     margin: 0;
-    font-size: 2.5rem;
+    font-size: 48px;
 }
 
 header p {
-    margin: 0.5rem 0;
+    margin: 8px 0;
 }
 
 nav ul {
@@ -44,39 +44,39 @@ nav ul li a {
 }
 
 .section {
-    padding: 2rem 0;
+    padding: 32px 0;
 }
 
 .skills-list {
     list-style: none;
     padding: 0;
     display: flex;
-    gap: 1rem;
+    gap: 16px;
     flex-wrap: wrap;
 }
 
 .skills-list li {
     background: #ddd;
-    padding: 0.5rem 1rem;
+    padding: 8px 16px;
     border-radius: 5px;
 }
 
 .projects-grid {
     display: flex;
-    gap: 1rem;
+    gap: 16px;
     flex-wrap: wrap;
 }
 
 .project {
-    flex: 1 1 calc(30% - 1rem);
+    flex: 1 1 calc(30% - 16px);
     background: #fff;
-    padding: 1rem;
-    border: 1px solid #ccc;
+    padding: 16px;
+    border: 1px solid #ffa0a0;
     border-radius: 5px;
 }
 
 footer {
     text-align: center;
-    /*padding: 1rem 0;*/
+    /*padding: 16px 0;*/
     background: linear-gradient(to bottom,#fac9a2, #c29ee9); /* Purple-blue gradient */
 }
