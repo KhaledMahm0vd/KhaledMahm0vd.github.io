@@ -70,8 +70,8 @@ body {
 section {
     padding: var(--section-padding);
     min-height: 100vh;
-    display: flex;
-    align-items: center;
+    /*display: flex;*/
+   /* align-items: center;*/
 }
 
 #home {
@@ -104,6 +104,7 @@ section {
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+	
 }
 
 .skill-category h3 {
@@ -113,17 +114,20 @@ section {
 
 .skill-category ul {
     list-style: none;
+	display: inline-block;
+  vertical-align: top;
+  padding-left: 0;
 }
 
 .skill-category li {
     margin: 0.5rem 0;
     padding-left: 1.5rem;
-    position: relative;
+    /*position: relative;*/
 }
 
 .skill-category li::before {
     content: "→";
-    position: absolute;
+    /*position: absolute;*/
     left: 0;
     color: var(--secondary-color);
 }
