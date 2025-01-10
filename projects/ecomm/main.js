@@ -3,16 +3,16 @@ let projects = [
     {
         title: "E-commerce API",
         description: "RESTful API built with Node.js and Express for an e-commerce platform",
-        technologies: ["Node.js, ", "Express, ", "MongoDB, ", "Jest"],
+        technologies: ["Node.js", "Express", "MongoDB", "Jest"],
         github: "https://github.com/username/ecommerce-api",
-        demo: "projects/ecomm/index.html"
+        demo: "https://api-demo.example.com"
     },
     {
         title: "Test Automation Framework",
         description: "Comprehensive testing framework for web applications",
-        technologies: ["JavaScript, ", "Cypress, ", "Selenium, ", "Mocha"],
+        technologies: ["JavaScript", "Cypress", "Selenium", "Mocha"],
         github: "https://github.com/username/test-framework",
-        demo: "projects/test/index.html"
+        demo: "https://framework-demo.example.com"
     }
 ];
 

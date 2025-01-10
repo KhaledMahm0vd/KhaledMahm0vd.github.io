@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Test Framework Demo</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 20px;
+        }
+        .test-case {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        .test-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .assertion {
+            margin-left: 20px;
+            margin-bottom: 5px;
+        }
+        .pass {
+            color: green;
+        }
+        .fail {
+            color: red;
+        }
+        #results {
+            margin-top: 20px;
+            border: 1px solid #aaa;
+            padding: 10px;
+        }
+        #summary {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Simple Test Framework Demo</h1>
+
+    <div id="test-container">
+        </div>
+
+    <div id="results">
+        <div id="summary"></div>
+        <ul id="test-results"></ul>
+    </div>
+
+    <script>
+        // Our simple test framework
+        const TestFramework = {
+            testCases: [],
+            addTest(name, testFunction) {
+                this.testCases.push({ name, testFunction });
+            },
+            runTests() {
+                let passedCount = 0;
+                let failedCount = 0;
+                const testResultsList = document.getElementById('test-results');
+                testResultsList.innerHTML = ''; // Clear previous results
+
+                this.testCases.forEach(testCase => {
+                    const testCaseDiv = document.createElement('div');
+                    testCaseDiv.classList.add('test-case');
+
+                    const titleDiv = document.createElement('div');
+                    titleDiv.classList.add('test-title');
+                    titleDiv.textContent = `Test: ${testCase.name}`;
+                    testCaseDiv.appendChild(titleDiv);
+
+                    let hasFailed = false;
+                    const assertions = [];
+                    const assert = (condition, message) => {
+                        const assertionDiv = document.createElement('li');
+                        assertionDiv.classList.add('assertion');
+                        assertionDiv.textContent = message;
+                        if (condition) {
+                            assertionDiv.classList.add('pass');
+                            assertionDiv.textContent += ' - Passed';
+                        } else {
+                            assertionDiv.classList.add('fail');
+                            assertionDiv.textContent += ' - Failed';
+                            hasFailed = true;
+                        }
+                        assertions.push(assertionDiv);
+                        testCaseDiv.appendChild(assertionDiv);
+                    };
+
+                    try {
+                        testCase.testFunction(assert);
+                    } catch (error) {
+                        const errorDiv = document.createElement('li');
+                        errorDiv.classList.add('assertion', 'fail');
+                        errorDiv.textContent = `Error: ${error.message}`;
+                        testCaseDiv.appendChild(errorDiv);
+                        hasFailed = true;
+                    }
+
+                    testResultsList.appendChild(testCaseDiv);
+
+                    if (hasFailed) {
+                        failedCount++;
+                    } else {
+                        passedCount++;
+                    }
+                });
+
+                const summaryDiv = document.getElementById('summary');
+                summaryDiv.textContent = `Total Tests: ${this.testCases.length} | Passed: ${passedCount} | Failed: ${failedCount}`;
+            }
+        };
+
+        // Define our test cases
+        TestFramework.addTest('Test Addition', (assert) => {
+            assert(2 + 2 === 4, 'Should add 2 and 2 correctly');
+            assert(5 + 3 === 8, 'Should add 5 and 3 correctly');
+            assert(10 + -5 === 5, 'Should handle negative numbers');
+        });
+
+        TestFramework.addTest('Test Subtraction', (assert) => {
+            assert(5 - 2 === 3, 'Should subtract correctly');
+            assert(10 - 5 === 5, 'Should subtract correctly');
+            assert(0 - 5 === -5, 'Should handle negative results');
+        });
+
+        TestFramework.addTest('Test String Concatenation', (assert) => {
+            assert('hello' + ' world' === 'hello world', 'Should concatenate strings');
+            assert('1' + '2' === '12', 'Should concatenate string numbers');
+        });
+
+        TestFramework.addTest('Test Array Length', (assert) => {
+            const arr1 = [1, 2, 3];
+            assert(arr1.length === 3, 'Array should have the correct length');
+            const arr2 = [];
+            assert(arr2.length === 0, 'Empty array should have length 0');
+        });
+
+        TestFramework.addTest('Test Failing Case', (assert) => {
+            assert(1 + 1 === 3, 'This test should fail');
+        });
+
+        TestFramework.addTest('Test Error Handling', (assert) => {
+            const divideByZero = () => {
+                return 10 / 0;
+            };
+            try {
+                divideByZero();
+                assert(false, 'Should have thrown an error'); // This line should not be reached
+            } catch (error) {
+                assert(true, 'Successfully caught an error');
+            }
+        });
+
+        // Run the tests when the page loads
+        window.onload = () => {
+            TestFramework.runTests();
+        };
+    </script>
+</body>
+</html>
