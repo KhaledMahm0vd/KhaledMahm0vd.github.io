@@ -39,27 +39,7 @@ function renderProjects() {
     });
 }
 
-// Create project card
-function createProjectCard(project) {
-    const card = document.createElement('div');
-    card.className = 'project-card';
-    
-    card.innerHTML = `
-        <div class="project-content">
-            <h3>${project.title}</h3>
-            <p>${project.description}</p>
-            <div class="technologies">
-                ${project.technologies.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
-            </div>
-            <div class="project-links">
-                <a href="${project.github}" target="_blank">GitHub</a>
-                <a href="${project.demo}" target="_blank">Live Demo</a>
-            </div>
-        </div>
-    `;
-    
-    return card;
-}
+//
 
 // Setup event listeners
 function setupEventListeners() {
@@ -68,22 +48,7 @@ function setupEventListeners() {
         adminContent.classList.toggle('active');
     });
 
-    // Add new project
-    addProjectBtn.addEventListener('click', () => {
-        const newProject = {
-            title: prompt('Project title:'),
-            description: prompt('Project description:'),
-            technologies: prompt('Technologies (comma-separated):').split(',').map(tech => tech.trim()),
-            github: prompt('GitHub URL:'),
-            demo: prompt('Demo URL:')
-        };
-
-        if (newProject.title && newProject.description) {
-            projects.push(newProject);
-            renderProjects();
-            saveToLocalStorage();
-        }
-    });
+//
 
     // Edit content
     editContentBtn.addEventListener('click', () => {
