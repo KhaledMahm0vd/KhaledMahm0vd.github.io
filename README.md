@@ -1,6 +1,5 @@
-<h1>Khaled Mahmoud, Biochemist, SW Tester, Node.JS Backend Developer</h1>
-<p align="center">Biochemist, QC Specialist at Soya Oil Plant, Egypt.</p>
-<p align="center">Aspiring Junior Node.JS Backend Developer</p>
+<h1>Khaled Mahmoud, Chemist, SW Tester</h1>
+<p align="center">Experienced Senior Quality Control Specialist with a strong background in Chemistry, now leveraging a meticulous eye for detail and analytical skills in Software Quality Assurance. As a freelance software tester on TestIO, I specialize in both manual testing ensuring robust and high-quality software solutions.</p>
 <h3 align="center">Personal Website</h3>
 <h2 align="center"> My Repositories:</h2>
 <a href="https://github.com/KhaledMahm0vd" target="_blank">Github</a>
